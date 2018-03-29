@@ -21,8 +21,6 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--FONTAWESOME MAIN STYLE -->
     <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" />
-    <!--SLIDER CSS CLASES -->
-    <link href="assets/Slides-SlidesJS-3/examples/playing/css/slider.css" rel="stylesheet" />
     <!--CUSTOM STYLE -->
     <link href="assets/css/style.css" rel="stylesheet" />
 
@@ -67,13 +65,40 @@
     <!-- HOME SECTION -->
     <div style="padding-top:50px;"></div>
     <!-- SLIDER SECTION -->
-    <div id="slides">
-        <img src="assets/img/slider/images/01.jpg" alt="" />
-        <img src="assets/img/slider/images/02.jpg" alt="" />
-        <img src="assets/img/slider/images/03.jpg" alt="" />
-        <img src="assets/img/slider/images/04-1.jpg" alt="" />
-
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="assets/img/slider/images/01.jpg" alt="" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="assets/img/slider/images/02.jpg" alt="" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="assets/img/slider/images/03.jpg" alt="" style="width:100%;">
+            </div>
+            <div class="item">
+                <img src="assets/img/slider/images/04.jpg" alt="" style="width:100%;">
+            </div>
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
+    
     <!-- END SLIDER SECTION -->
 
     <div class="container">
@@ -157,27 +182,7 @@
     <script src="assets/js/jquery.js"></script>
     <!-- CORE BOOTSTRAP LIBRARY -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- SLIDER SCRIPTS LIBRARY -->
-    <script src="assets/Slides-SlidesJS-3/examples/playing/js/jquery.slides.min.js"></script>
-    <!-- CUSTOM SCRIPT-->
-    <script>
-        $(document).ready(function () {
-            $('#slides').slidesjs({
-                width: 940,
-                height: 128,
-                play: {
-                    active: false,
-                    auto: true,
-                    interval: 4000,
-                    swap: false
-                },
-                navigation: {
-                    active: false
-                }
-            });
-        });
 
-    </script>
 
 </body>
 </html>
