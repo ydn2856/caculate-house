@@ -18,7 +18,7 @@
     <!--GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!--BOOTSTRAP MAIN STYLES -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!--FONTAWESOME MAIN STYLE -->
     <link href="assets/css/fontawesome-all.min.css" rel="stylesheet" />
     <!--SLIDER CSS CLASES -->
@@ -48,25 +48,30 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="#">顯示卡</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">顯示卡<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Nvidia</a></li>
+                            <li><a href="#">AMD</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">晶片機</a></li>
                     <li><a href="#">周邊商品</a></li>
                     <li><a href="#">算力試算</a></li>
                     <li><a href="#">聯絡我們</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
     <!--END NAV SECTION -->
     <!-- HOME SECTION -->
-
+    <div style="padding-top:50px;"></div>
     <!-- SLIDER SECTION -->
     <div id="slides">
         <img src="assets/img/slider/images/01.jpg" alt="" />
         <img src="assets/img/slider/images/02.jpg" alt="" />
         <img src="assets/img/slider/images/03.jpg" alt="" />
-        <img src="assets/img/slider/images/04.jpg" alt="" />
+        <img src="assets/img/slider/images/04-1.jpg" alt="" />
 
     </div>
     <!-- END SLIDER SECTION -->
@@ -159,12 +164,15 @@
         $(document).ready(function () {
             $('#slides').slidesjs({
                 width: 940,
-                height: 528,
+                height: 128,
                 play: {
-                    active: true,
+                    active: false,
                     auto: true,
                     interval: 4000,
-                    swap: true
+                    swap: false
+                },
+                navigation: {
+                    active: false
                 }
             });
         });

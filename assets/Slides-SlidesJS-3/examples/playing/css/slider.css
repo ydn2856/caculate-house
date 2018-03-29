@@ -100,10 +100,7 @@
     }
 
     .navbar {
-      overflow: hidden
-    }
-      #slides {
-      display: none
+      /*overflow: hidden*/
     }
 
     .container {
